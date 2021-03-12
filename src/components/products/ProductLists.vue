@@ -4,7 +4,7 @@
           <div class="container">
               This is ProductList
           </div>
-          <template v-for="product in products">
+          <!-- <template v-for="product in products"> -->
               <!-- <div class="product" :key="product._id">
                   <p class="product_name">产品名称：{{product.name}}</p>
                   <p class="product_description">介绍：{{product.description}}</p>
@@ -13,8 +13,8 @@
                   <img :src="product.image" alt="" class="product_image">
                   <button @click="addToCart(product)">加入购物车</button>
               </div> -->
-              <product-item :product="product" :key="product._id"></product-item>
-          </template>
+              <product-item :products="products"></product-item>
+          <!-- </template> -->
       </div>
   </div>
 </template>

@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="products">
       <!-- <div class="title">
           <h1>This is Admin</h1>
       </div>
       <div class="body">
           {{product.name}}
       </div> -->
-     <table class="table">
+     <!-- <table class="table">
       <thead>
         <tr>
           <th>名称</th>
@@ -25,7 +25,34 @@
           <td class="remove"><a @click="removeProduct(product._id)" href="#">删除</a></td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
+    <el-table
+    class="table"
+    :data="products">
+      <el-table-column
+        prop="name"
+        label="名称"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="price"
+        label="价格"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="manufacturer.name"
+        label="制造商"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        label="操作"
+        width="200">
+        <template slot-scope="scope">
+          <el-button class="modify" type="text" size="small"><router-link :to="'/admin/edit/' + scope.row._id">修改</router-link></el-button>
+          <el-button class="remove" @click="removeProduct(scope.row._id), deleteRow(scope.$index, products)" type="text" size="small">删除</el-button>
+        </template>
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 

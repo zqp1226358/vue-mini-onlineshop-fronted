@@ -30,6 +30,11 @@ export default {
   //     ],
   //   };
   // },
+  data() {
+    return {
+      model: {manufacturer:{name: ''}}
+    }
+  },
   created() {
     if (this.manufacturers.length === 0) {
       this.$store.dispatch('allManufacturers');
@@ -39,9 +44,9 @@ export default {
     manufacturers() {
       return this.$store.getters.allManufacturers;
     },
-    model() {
-      return {};
-    }
+    // model() {
+    //   return {};
+    // }
   },
   methods:{
     addProduct(model){

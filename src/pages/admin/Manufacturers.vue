@@ -1,6 +1,6 @@
 <template>
-  <div>
-      <table class="table">
+  <div class="manufacturers">
+      <!-- <table class="table">
           <thead>
               <tr>
                   <th>制造商</th>
@@ -15,7 +15,24 @@
                   <td class="remove"><a @click="removeManufacturer(manufacturer._id)" href="#">删除</a></td>
               </tr>
           </tbody>
-      </table>
+      </table> -->
+       <el-table
+    class="table"
+    :data="manufacturers">
+      <el-table-column
+        prop="name"
+        label="制造商"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        label="操作"
+        width="200">
+        <template slot-scope="scope">
+          <el-button class="modify" type="text" size="small"><router-link :to="'/admin/manufacturers/edit/' + scope.row._id">修改</router-link></el-button>
+          <el-button class="remove" @click="removeManufacturer(scope.row._id), deleteRow(scope.$index, products)" type="text" size="small">删除</el-button>
+        </template>
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 

@@ -1,3 +1,4 @@
+import { Message } from 'element-ui';
 export const productMutations = {
     ALL_PRODUCTS(state){
         state.showLoader = true;
@@ -11,25 +12,25 @@ export const productMutations = {
     PRODUCT_BY_ID(state) {
         state.showLoader = true;
       },
-      PRODUCT_BY_ID_SUCCESS(state, payload) {
+    PRODUCT_BY_ID_SUCCESS(state, payload) {
         state.showLoader = false;
     
         const { product } = payload;
         state.product = product;
       },
-      REMOVE_PRODUCT(state) {
+    REMOVE_PRODUCT(state) {
         state.showLoader = true;
       },
-      REMOVE_PRODUCT_SUCCESS(state, payload) {
+    REMOVE_PRODUCT_SUCCESS(state, payload) {
         state.showLoader = false;
     
         const { productId } = payload;
         state.products = state.products.filter(product => product._id !== productId);
       },
-      UPDATE_PRODUCT(state) {
+    UPDATE_PRODUCT(state) {
         state.showLoader = true;
       },
-      UPDATE_PRODUCT_SUCCESS(state, payload) {
+    UPDATE_PRODUCT_SUCCESS(state, payload) {
         state.showLoader = false;
     
         const { product: newProduct } = payload;
@@ -40,7 +41,8 @@ export const productMutations = {
           }
     
           return product;
-        })
+        });
+        state.product = newProduct;
       },
       ADD_PRODUCT(state) {
         state.showLoader = true;
@@ -56,11 +58,19 @@ export const productMutations = {
 export const cartMutations = {
     ADD_TO_CART(state, payload) {
       const { product } = payload;
-      state.cart.push(product)
+      state.cart.push(product);
+      Message({
+        message: '恭喜你，成功加入购物车！',
+        type: 'success'
+      })
     },
     REMOVE_FROM_CART(state, payload) {
       const { productId } = payload
       state.cart = state.cart.filter(product => product._id !== productId)
+      Message({
+        message: '恭喜你，成功移除购物车！',
+        type: 'success'
+      })
     },
   }
   
@@ -105,7 +115,8 @@ export const manufacturerMutations = {
           }
     
           return manufacturer;
-        })
+        });
+        state.manufacturer = newManufacturer;
       },
     ADD_MANUFACTURER(state) {
         state.showLoader = true;

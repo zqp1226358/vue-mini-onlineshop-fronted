@@ -3,7 +3,7 @@
       <div class="title">
           <h1>{{msg}}</h1>
       </div>
-      <template v-for="product in cart">
+      <!-- <template v-for="product in cart"> -->
           <!-- <div :key="product._id" class="product">
               <p class="product_name">产品名称：{{product.name}}</p>
               <p class="product_description">介绍：{{product.description}}</p>
@@ -12,8 +12,9 @@
               <img :src="product.image" alt="" class="product_image">
               <button @click="removeFromCart(product._id)">从购物车中移除</button>
           </div> -->
-        <product-item :product="product" :key="product._id"></product-item>
-      </template>
+        <!-- <product-item :product="product" :key="product._id"></product-item>
+      </template> -->
+       <product-item :products="cart"></product-item>
   </div>
 </template>
 
