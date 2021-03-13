@@ -113,3 +113,29 @@ Avoid using non-primitive value as key, use string/number value instead.
  Duplicate keys detected: '[object Object]'. This may cause an update error.
 意思是：检测到重复键:'[object object]'。这可能会导致更新错误。
 **key值是必须唯一的，如果重复就会报错**
+
+
+
+### …or create a new repository on the command line
+
+
+
+```
+echo "# vue-mini-onlineshop-backend" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:zqp1226358/vue-mini-onlineshop-backend.git
+git push -u origin main
+```
+
+### …or push an existing repository from the command line
+
+
+
+```
+git remote add origin git@github.com:zqp1226358/vue-mini-onlineshop-backend.git
+git branch -M main
+git push -u origin main
+```
