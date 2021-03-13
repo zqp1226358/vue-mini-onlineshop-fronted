@@ -14,7 +14,7 @@
           </div> -->
         <!-- <product-item :product="product" :key="product._id"></product-item>
       </template> -->
-       <product-item :products="cart"></product-item>
+       <product-item :products="cart" :show="true"></product-item>
   </div>
 </template>
 

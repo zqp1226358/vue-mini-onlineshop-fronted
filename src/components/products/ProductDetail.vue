@@ -30,8 +30,12 @@ export default {
 </script>
 
 <style>
-.product-details_image .image{
-    width: 100px;
-    height: 100px;
+.product-details_image {
+    display: flex;
+    justify-content: center;
+}
+.image{
+    width: 200px;
+    height: 200px;
 }
 </style>

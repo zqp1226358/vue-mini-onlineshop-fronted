@@ -19,7 +19,7 @@
     </nav> -->
 
     <el-menu
-      class="menu" :default-active="activeIndex2" mode="horizontal" @select="handleSelect" background-color="#545c64"
+      class="menu" :default-active="activeIndex2" mode="horizontal" @select="handleSelect"  background-color="#545c64"
       text-color="#fff" active-text-color="#ffd04b">
       <el-menu-item index="1"><router-link to="/" tag="div">Home</router-link></el-menu-item>
       <!-- tag 属性的设置是为了去除下划线。 -->
@@ -63,5 +63,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px; */
+  text-align: center;
+  height:100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 }
+.menu{
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+}
+
 </style>
