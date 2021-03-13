@@ -1,6 +1,29 @@
 # vue-online-shop-frontend
 
 > A Vue.js project
+>
+> **参考教程**：https://juejin.cn/post/6844904025272352775（新手强烈推荐！）
+>
+> **后端项目代码：**https://github.com/zqp1226358/vue-mini-onlineshop-backend
+>
+> **主要技术栈**：Vue+Express+Mongdb
+>
+> **项目目的**：通过此项目的学习，巩固和复习vue的基本语法，比如v-on，v-bind，v-model，v-if等常用指令，以及父子组件如何通信，然后对vuex状态管理有所了解和应用，使用express和mongdb数据库做为后端处理数据响应，使用axios进行请求以及用cors解决跨域的问题，最后使用elementUI对页面进行美化！
+>
+> **主要功能**：
+>
+> - 首页对商品进行选购加入购物车，也可以在Cart购物车中移除商品
+> - 管理商品信息和制造商信息，进行增删改查的操作
+>
+> **待补充完善功能：**
+>
+> - 设置登录注册页面
+> - 只有管理员可以对商品等进行管理。
+
+页面大致展示：
+
+[![6dqOyD.md.gif](https://s3.ax1x.com/2021/03/13/6dqOyD.md.gif)](https://imgtu.com/i/6dqOyD)
+[![6dqXOe.md.gif](https://s3.ax1x.com/2021/03/13/6dqXOe.md.gif)](https://imgtu.com/i/6dqXOe)
 
 ## Build Setup
 
@@ -20,16 +43,12 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-
+**遇到的一些小问题和知识点**
 
 - @/ 与 ./
 - router路由
 - router-view渲染  router-link跳转（优化于a标签）
 - 动态路由$route.params.id
-
-
-
-## 后端
 
 - ../与../../
 - mongodb安装与运行
@@ -68,7 +87,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 > mongo mongodb://admin:123456@localhost:27017/test
 ```
 
-#### 创建数据库
+**创建数据库**
 
 创建数据库使用`use [数据库名]`,例如创建一个**test123**的数据库
 
@@ -91,13 +110,15 @@ local  0.000GB
 
 【MongoDB】mongodb 导入json文件
 
-### 方法一：
+**方法一：**
 
 **mongoimport --db test --collection user --file C:\Users\zhang_zk\Desktop\new.json**
 
 其他方法详见：https://blog.csdn.net/qq_37495786/article/details/81316708
 
 
+
+##遇见的坑记录
 
 - 坑1：注意model的名称接口要与control层相对应
 - 坑2：postman开桌面代理，post时选择json数据格式
@@ -116,9 +137,7 @@ Avoid using non-primitive value as key, use string/number value instead.
 
 
 
-### …or create a new repository on the command line
-
-
+##git上传命令
 
 ```
 echo "# vue-mini-onlineshop-backend" >> README.md
@@ -129,8 +148,6 @@ git branch -M main
 git remote add origin git@github.com:zqp1226358/vue-mini-onlineshop-backend.git
 git push -u origin main
 ```
-
-### …or push an existing repository from the command line
 
 
 
