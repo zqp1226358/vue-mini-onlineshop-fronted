@@ -6,7 +6,7 @@
 >
 > **后端项目代码：**https://github.com/zqp1226358/vue-mini-onlineshop-backend
 >
-> **主要技术栈**：Vue+Express+Mongdb
+> **主要技术栈**：Vue+Express+Mongodb
 >
 > **项目目的**：通过此项目的学习，巩固和复习vue的基本语法，比如v-on，v-bind，v-model，v-if等常用指令，以及父子组件如何通信，然后对vuex状态管理有所了解和应用，使用express和mongdb数据库做为后端处理数据响应，使用axios进行请求以及用cors解决跨域的问题，最后使用elementUI对页面进行美化！
 >
